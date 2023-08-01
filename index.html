@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Contador</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+            320deg,
+            #a50cea,
+            #9109d7,
+            #7c06c4,
+            #6803b0,
+            #53009d
+          )
+          fixed;
+        overflow: hidden;
+        color: white;
+      }
+
+      #container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .boxQuest {
+        width: 50%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .boxQuest #text {
+        font-size: 25pt;
+      }
+
+      .boxQuest input {
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;
+        font-size: 20pt;
+        font-weight: 700;
+        background: rgb(255, 255, 255, 0.5);
+        --webkit-backdrop-filter: blur(5.5px);
+        backdrop-filter: blur(5.5px);
+        color: white;
+      }
+
+      .tab {
+        width: 90%;
+        height: 60%;
+        max-width: 90%;
+        max-height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .tab .items {
+        width: 40%;
+        height: 60%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background: #a50cea;
+        border-radius: 20px;
+        box-shadow: 0 0 10px -12px #000;
+      }
+    </style>
+
+    <main id="container">
+      <div class="boxQuest">
+        <h1 id="text">Digite o valor:</h1>
+        <input id="numQuest" type="number" />
+      </div>
+
+      <div class="tab">
+        <div class="items">
+          <div class="plus">
+            <h4>
+              <span id="X_plus_1">X</span> &plus; 1 =
+              <span id="res_plus_1">?</span>
+            </h4>
+            <h4>
+              <span id="X_plus_2">X</span> &plus; 2 =
+              <span id="res_plus_2">?</span>
+            </h4>
+            <h4>
+              <span id="X_plus_3">X</span> &plus; 3 =
+              <span id="res_plus_3">?</span>
+            </h4>
+            <h4>
+              <span id="X_plus_4">X</span> &plus; 4 =
+              <span id="res_plus_4">?</span>
+            </h4>
+            <h4>
+              <span id="X_plus_5">X</span> &plus; 5 =
+              <span id="res_plus_5">?</span>
+            </h4>
+            <h4>
+              <span id="X_plus_6">X</span> &plus; 6 =
+              <span id="res_plus_6">?</span>
+            </h4>
+            <h4>
+              <span id="X_plus_7">X</span> &plus; 7 =
+              <span id="res_plus_7">?</span>
+            </h4>
+            <h4>
+              <span id="X_plus_8">X</span> &plus; 8 =
+              <span id="res_plus_8">?</span>
+            </h4>
+            <h4>
+              <span id="X_plus_9">X</span> &plus; 9 =
+              <span id="res_plus_9">?</span>
+            </h4>
+            <h4>
+              <span id="X_plus_10">X</span> &plus; 10 =
+              <span id="res_plus_10">?</span>
+            </h4>
+          </div>
+          <div class="mines">
+            <h4>
+              <span id="X_mines_1">X</span> &minus; 1 =
+              <span id="res_mines_1">?</span>
+            </h4>
+            <h4>
+              <span id="X_mines_2">X</span> &minus; 2 =
+              <span id="res_mines_2">?</span>
+            </h4>
+            <h4>
+              <span id="X_mines_3">X</span> &minus; 3 =
+              <span id="res_mines_3">?</span>
+            </h4>
+            <h4>
+              <span id="X_mines_4">X</span> &minus; 4 =
+              <span id="res_mines_4">?</span>
+            </h4>
+            <h4>
+              <span id="X_mines_5">X</span> &minus; 5 =
+              <span id="res_mines_5">?</span>
+            </h4>
+            <h4>
+              <span id="X_mines_6">X</span> &minus; 6 =
+              <span id="res_mines_6">?</span>
+            </h4>
+            <h4>
+              <span id="X_mines_7">X</span> &minus; 7 =
+              <span id="res_mines_7">?</span>
+            </h4>
+            <h4>
+              <span id="X_mines_8">X</span> &minus; 8 =
+              <span id="res_mines_8">?</span>
+            </h4>
+            <h4>
+              <span id="X_mines_9">X</span> &minus; 9 =
+              <span id="res_mines_9">?</span>
+            </h4>
+            <h4>
+              <span id="X_mines_10">X</span> &minus; 10 =
+              <span id="res_mines_10">?</span>
+            </h4>
+          </div>
+          <div class="multiply">
+            <h4>
+              <span id="X_multiply_1">X</span> &times; 1 =
+              <span id="res_multiply_1">?</span>
+            </h4>
+            <h4>
+              <span id="X_multiply_2">X</span> &times; 2 =
+              <span id="res_multiply_2">?</span>
+            </h4>
+            <h4>
+              <span id="X_multiply_3">X</span> &times; 3 =
+              <span id="res_multiply_3">?</span>
+            </h4>
+            <h4>
+              <span id="X_multiply_4">X</span> &times; 4 =
+              <span id="res_multiply_4">?</span>
+            </h4>
+            <h4>
+              <span id="X_multiply_5">X</span> &times; 5 =
+              <span id="res_multiply_5">?</span>
+            </h4>
+            <h4>
+              <span id="X_multiply_6">X</span> &times; 6 =
+              <span id="res_multiply_6">?</span>
+            </h4>
+            <h4>
+              <span id="X_multiply_7">X</span> &times; 7 =
+              <span id="res_multiply_7">?</span>
+            </h4>
+            <h4>
+              <span id="X_multiply_8">X</span> &times; 8 =
+              <span id="res_multiply_8">?</span>
+            </h4>
+            <h4>
+              <span id="X_multiply_9">X</span> &times; 9 =
+              <span id="res_multiply_9">?</span>
+            </h4>
+            <h4>
+              <span id="X_multiply_10">X</span> &times; 10 =
+              <span id="res_multiply_10">?</span>
+            </h4>
+          </div>
+          <div class="division">
+            <h4>
+              <span id="X_division_1">X</span> &divide; 1 =
+              <span id="res_division_1">?</span>
+            </h4>
+            <h4>
+              <span id="X_division_2">X</span> &divide; 2 =
+              <span id="res_division_2">?</span>
+            </h4>
+            <h4>
+              <span id="X_division_3">X</span> &divide; 3 =
+              <span id="res_division_3">?</span>
+            </h4>
+            <h4>
+              <span id="X_division_4">X</span> &divide; 4 =
+              <span id="res_division_4">?</span>
+            </h4>
+            <h4>
+              <span id="X_division_5">X</span> &divide; 5 =
+              <span id="res_division_5">?</span>
+            </h4>
+            <h4>
+              <span id="X_division_6">X</span> &divide; 6 =
+              <span id="res_division_6">?</span>
+            </h4>
+            <h4>
+              <span id="X_division_7">X</span> &divide; 7 =
+              <span id="res_division_7">?</span>
+            </h4>
+            <h4>
+              <span id="X_division_8">X</span> &divide; 8 =
+              <span id="res_division_8">?</span>
+            </h4>
+            <h4>
+              <span id="X_division_9">X</span> &divide; 9 =
+              <span id="res_division_9">?</span>
+            </h4>
+            <h4>
+              <span id="X_division_10">X</span> &divide; 10 =
+              <span id="res_division_10">?</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+        document.getElementById("numQuest").addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          let numQuest = parseInt(document.getElementById("numQuest").value);
+          for (let contador = 1; contador <= 10; contador++) {
+            let num = document.getElementById(`X_plus_${contador}`);
+            let res = document.getElementById(`res_plus_${contador}`);
+            num.innerHTML = numQuest;
+            res.innerHTML = numQuest + contador;
+          }
+          for (let contador = 1; contador <= 10; contador++) {
+            let num = document.getElementById(`X_mines_${contador}`);
+            let res = document.getElementById(`res_mines_${contador}`);
+            num.innerHTML = numQuest;
+            res.innerHTML = numQuest - contador;
+          }
+          for (let contador = 1; contador <= 10; contador++) {
+            let num = document.getElementById(`X_multiply_${contador}`);
+            let res = document.getElementById(`res_multiply_${contador}`);
+            num.innerHTML = numQuest;
+            res.innerHTML = numQuest * contador;
+          }
+          for (let contador = 1; contador <= 10; contador++) {
+            let num = document.getElementById(`X_division_${contador}`);
+            let res = document.getElementById(`res_division_${contador}`);
+            num.innerHTML = numQuest;
+            res.innerHTML = numQuest / contador;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
